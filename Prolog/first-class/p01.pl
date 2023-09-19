@@ -1,4 +1,4 @@
-% a)
+/* a) */
 
 female(grace).
 female(dede).
@@ -67,4 +67,12 @@ parent(haley, poppy).
 | ?- parent(jay, _P), parent(_P, GC).
 | ?- parent(_P, lily), parent(GP, _P).
 | ?- parent(alex, _C). 
-| ?- parent(_P, luke), parent(_P, S), S \= luke.*/
+| ?- parent(_P, luke), parent(_P, S), S \= luke. */
+
+/* c) */
+
+father(X, Y) :- male(X), parent(X, Y).
+mother(X, Y) :- female(X), parent(X, Y).
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+grandfather(X, Y) :- male(X), grandparent(X, Y).
+grandmother(X, Y) :- female(X), grandparent(X, Y).
