@@ -57,3 +57,10 @@ parent(dylan, george).
 parent(dylan, poppy).
 parent(haley, george).
 parent(haley, poppy).
+
+/* b)
+| ?- female(haley).
+| ?- male(gil).
+| ?- parent(frank, phil).
+| ?- parent(X, claire).
+| ?- parent(gloria, Y). */
