@@ -62,5 +62,9 @@ parent(haley, poppy).
 | ?- female(haley).
 | ?- male(gil).
 | ?- parent(frank, phil).
-| ?- parent(X, claire).
-| ?- parent(gloria, Y). */
+| ?- parent(P, claire).
+| ?- parent(gloria, C). 
+| ?- parent(jay, _P), parent(_P, GC).
+| ?- parent(_P, lily), parent(GP, _P).
+| ?- parent(alex, _C). 
+| ?- parent(_P, luke), parent(_P, S), S \= luke.*/
