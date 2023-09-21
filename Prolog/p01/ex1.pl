@@ -76,3 +76,8 @@ mother(X, Y) :- female(X), parent(X, Y).
 grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
 grandfather(X, Y) :- male(X), grandparent(X, Y).
 grandmother(X, Y) :- female(X), grandparent(X, Y).
+siblings(X, Y) :- parent(P, X), parent(P, Y), X \= Y.
+halfSiblings(X, Y) :- parent(PX, X), parent(PY, Y), PX \= PY, \+ siblings(X, Y).
+uncle(X, Y) :- male(X), parent(P, Y), sibling(X, P).
+aunt(X, Y) :- female(X), parent(P, Y), sibling(X, P).
+cousin(X, Y) :- parent(PX, X), parent(PY, Y), sibling(PX, PY), X \= Y.  
