@@ -78,6 +78,21 @@ grandfather(X, Y) :- male(X), grandparent(X, Y).
 grandmother(X, Y) :- female(X), grandparent(X, Y).
 siblings(X, Y) :- parent(P, X), parent(P, Y), X \= Y.
 halfSiblings(X, Y) :- parent(PX, X), parent(PY, Y), PX \= PY, \+ siblings(X, Y).
-uncle(X, Y) :- male(X), parent(P, Y), sibling(X, P).
-aunt(X, Y) :- female(X), parent(P, Y), sibling(X, P).
-cousin(X, Y) :- parent(PX, X), parent(PY, Y), sibling(PX, PY), X \= Y.  
+uncle(X, Y) :- male(X), parent(P, Y), siblings(X, P).
+aunt(X, Y) :- female(X), parent(P, Y), siblings(X, P).
+cousin(X, Y) :- parent(PX, X), parent(PY, Y), siblings(PX, PY), X \= Y.  
+
+/* d)
+
+| ?- cousin(haley, lily).
+| ?- father(F, luke).
+| ?- uncle(U, lily).
+| ?- grandmother(GM, _GC).
+| ?- siblings(S1, S2).
+| ?- halfSiblings(HS1, HS2). */
+
+/* e)
+
+wedding(jay, gloria, '2008').
+wedding(jay, dede, '1968').
+divorce(jay, dede, '2003'). */
