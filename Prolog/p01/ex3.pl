@@ -44,4 +44,4 @@ teamwin(X, Y) :- win(P, Y), team(P, X).
 | ?- gates(C, 9).
 | ?- plane(P, _A), _A \= edge540.
 | ?- once((win(P, _C1), win(P, _C2), _C1 \= _C2, pilot(P))).
-| ?- plane(_P, A), win(_P, porto).
+| ?- plane(_P, A), win(_P, porto). */
