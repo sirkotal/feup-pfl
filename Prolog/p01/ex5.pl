@@ -55,3 +55,7 @@ iv ->  P = gertrudes
 
 boss(X, Y) :- job(J1, X), job(J2, Y), supervised_by(J2, J1).
 same_boss(X, Y) :- job(J1, X), job(J2, Y), supervised_by(J1, B), supervised_by(J2, B).
+multiple_supervisions(X) :- job(J, X), supervised_by(A, J), supervised_by(B, J), A \= B.
+supervisor_of_supervisor(X, Y) :- job(J1, X), job(J2, Y), supervised_by(J2, S), supervised_by(S, J1). 
+
+/* boss = supervisor */
