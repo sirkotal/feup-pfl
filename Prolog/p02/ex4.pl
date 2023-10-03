@@ -18,6 +18,22 @@ somaRec(N, Sum) :-
 
 /* c) */
 
+pow_rec(_, 0, 1).
+pow_rec(X, Y, P) :-
+    Y > 0,               
+    Y1 is Y - 1,  
+    pow_rec(X, Y1, P1),  
+    P is P1 * X.       
+    
+/* d) */
+
+square_rec(0, 0).
+square_rec(N, S) :-
+    N > 0,          
+    N1 is N - 1,    
+    square_rec(N1, S1), 
+    S is S1 + N + N1.
+
 /* e) */
 
 fibonacci(0, 1).
