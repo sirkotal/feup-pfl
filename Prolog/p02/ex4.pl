@@ -9,11 +9,11 @@ factorial(N, F) :-
 
 /* b) */
 
-somaRec(0, 0).
-somaRec(N, Sum) :-
+sum_rec(0, 0).
+sum_rec(N, Sum) :-
     N > 0,
     N1 is N - 1,
-    somaRec(N1, Sum1),
+    sum_rec(N1, Sum1),
     Sum is N + Sum1.
 
 /* c) */
@@ -45,6 +45,22 @@ fibonacci(N, F) :-
     fibonacci(N1, F1),
     fibonacci(N2, F2),
     F is F1 + F2.
+
+/* f) */
+
+collatz(1, 0).
+collatz(N, Steps) :-
+    N > 1,
+    N mod 2 =:= 0,       
+    N1 is N // 2,       
+    collatz(N1, SubSteps),
+    Steps is SubSteps + 1. 
+collatz(N, Steps) :-
+    N > 1,
+    N mod 2 =:= 1,        
+    N1 is 3 * N + 1,      
+    collatz(N1, SubSteps), 
+    Steps is SubSteps + 1. 
 
 /* g) */
 
