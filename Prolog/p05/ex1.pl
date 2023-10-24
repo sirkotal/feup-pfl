@@ -62,3 +62,9 @@ couple(X, Y) :-
     X @< Y.
 
 couples(List) :- findall(P, couple(X, Y), Couples), sort(Couples, List).
+
+/* f) */
+
+spouse_children(Person, Spouse/Children) :-
+    spouse(Person, Spouse),
+    findall(Child, (parent(Person, Child), parent(Spouse, Child)), Children).
