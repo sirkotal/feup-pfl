@@ -1,2 +1,5 @@
 xor :: Bool -> Bool -> Bool
-xor a b = (a /= b)
+xor True True = False
+xor True False = True
+xor False True = True
+xor False False = False

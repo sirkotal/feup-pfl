@@ -1,15 +1,6 @@
-evaluate :: Int -> String 
-evaluate x =  if x <= 9
-                then "reprovado"
-            else
-                if x <= 12
-                    then "suficiente"
-                else
-                    if x <= 15
-                        then "bom"
-                    else
-                        if x <= 18
-                            then "muito bom"
-                        else "muito bom com distinção"
-
-{-main = print(evaluate 15)-}
+classify :: Int -> String
+classify n | (n <= 9) = "reprovado"
+           | n >= 10 && n <= 12 = "suficiente"
+           | n >= 13 && n <= 15 = "bom"
+           | n >= 16 && n <= 18 = "muito bom"
+           | n >= 19 && n <= 20 = "excelente"
