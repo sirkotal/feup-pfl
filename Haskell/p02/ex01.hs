@@ -1,22 +1,18 @@
 myand :: [Bool] -> Bool
-myand [] = True
-myand (l : r) = l && myand r
+myand [] = False
+myand (x:xs) = x && myand xs
 
 myor :: [Bool] -> Bool
 myor [] = False
-myor (l : r) = l || myor r
-
-{-main = print(myor([True, True, True]))-}
+myor (x:xs) = x || myor xs
 
 myconcat :: [[a]] -> [a] 
 myconcat [] = []
-myconcat (l : r) = l ++ myconcat r
+myconcat (lst:rest) = lst ++ myconcat rest
 
 myreplicate :: Int -> a -> [a] 
 myreplicate 0 l = []
 myreplicate n l = l : myreplicate (n-1) l
-
-{-main = print(myreplicate 3 "a")-}
 
 (!!!) :: [a] -> Int -> a
 (l : _) !!! 0 = l
@@ -25,4 +21,4 @@ r !!! n | n < 0 = error "invalid index"
 
 myelem :: Eq a => a -> [a] -> Bool
 myelem e [] = False
-myelem e (l : r) = (l == e) || myelem e r
+myelem e (x:rest) = (x == e) || myelem e rest
