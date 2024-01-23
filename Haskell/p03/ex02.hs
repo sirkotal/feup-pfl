@@ -1,2 +1,2 @@
 dec2int :: [Int] -> Int
-dec2int = foldl (\x b -> x * 10 + b) 0
+dec2int lst = foldl (\x d -> x * 10 + d) 0 lst
