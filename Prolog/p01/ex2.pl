@@ -1,5 +1,4 @@
 /* a) */
-
 teaches(algorithms, adalberto).
 teaches(databases, bernardete).
 teaches(compilers, capitolino).
@@ -37,7 +36,6 @@ attends(networks, diana).
 attends(networks, eduardo).
 
 /* b)
-
 | ?- teaches(C, diogenes).
 | ?- teaches(_C, felismina).
 | ?- attends(C, claudio).
@@ -47,7 +45,6 @@ attends(networks, eduardo).
 | ?- attends(_C, alberto), attends(_C, alvaro). */
 
 /* c) */
-
 student(X,Y) :- teaches(C, Y), attends(C, X).
 teacher(Y, X) :- student(X, Y).
 colleague(X, Y) :- attends(C, X), attends(C, Y), X \= Y; teaches(A, X), teaches(B, Y), X \= Y.

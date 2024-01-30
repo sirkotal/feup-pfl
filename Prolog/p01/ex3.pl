@@ -1,5 +1,4 @@
 /* a) */
-
 pilot(lamb).
 pilot(besenyei).
 pilot(chambliss).

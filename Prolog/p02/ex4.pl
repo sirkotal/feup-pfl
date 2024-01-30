@@ -1,5 +1,4 @@
 /* a) */
-
 factorial(0, 1).
 factorial(N, F) :-
     N > 0,
@@ -8,7 +7,6 @@ factorial(N, F) :-
     F is N * F1.
 
 /* b) */
-
 sum_rec(0, 0).
 sum_rec(N, Sum) :-
     N > 0,
@@ -17,7 +15,6 @@ sum_rec(N, Sum) :-
     Sum is N + Sum1.
 
 /* c) */
-
 pow_rec(_, 0, 1).
 pow_rec(X, Y, P) :-
     Y > 0,               
@@ -26,7 +23,6 @@ pow_rec(X, Y, P) :-
     P is P1 * X.       
     
 /* d) */
-
 square_rec(0, 0).
 square_rec(N, S) :-
     N > 0,          
@@ -35,7 +31,6 @@ square_rec(N, S) :-
     S is S1 + N + N1.
 
 /* e) */
-
 fibonacci(0, 1).
 fibonacci(1, 1).
 fibonacci(N, F) :-
@@ -47,7 +42,6 @@ fibonacci(N, F) :-
     F is F1 + F2.
 
 /* f) */
-
 collatz(1, 0).
 collatz(N, Steps) :-
     N > 1,
@@ -63,7 +57,6 @@ collatz(N, Steps) :-
     Steps is SubSteps + 1. 
 
 /* g) */
-
 divisor(X, X) :- !.
 divisor(X, Y) :-
     X > Y,
