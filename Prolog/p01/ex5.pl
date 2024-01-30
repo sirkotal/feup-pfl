@@ -18,17 +18,15 @@ supervised_by(chief_supervisor, director).
 supervised_by(secretary, director).
 
 /* a) 
-
 i -> Does Sisnando supervise the analysts?
 
 ii -> Which post supervises the post that supervises technicians?
 
 iii -> Who is supervised by a supervisor?
 
-iv ->  Who is supervised by Asdrubal? /*
+iv ->  Who is supervised by Asdrubal? */
 
 /* b) 
-
 i -> true
 
 ii -> Y = supervisor
@@ -49,10 +47,9 @@ iii -> J = analyst,
        P = reginaldo
 
 iv ->  P = gertrudes
-       P = felismina /*
+       P = felismina */
 
 /* c) */
-
 boss(X, Y) :- job(J1, X), job(J2, Y), supervised_by(J2, J1).
 same_boss(X, Y) :- job(J1, X), job(J2, Y), supervised_by(J1, B), supervised_by(J2, B).
 multiple_supervisions(X) :- job(J, X), supervised_by(A, J), supervised_by(B, J), A \= B.

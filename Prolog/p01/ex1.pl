@@ -1,5 +1,4 @@
 /* a) */
-
 female(grace).
 female(dede).
 female(gloria).
@@ -70,7 +69,6 @@ parent(haley, poppy).
 | ?- parent(_P, luke), parent(_P, S), S \= luke. */
 
 /* c) */
-
 father(X, Y) :- male(X), parent(X, Y).
 mother(X, Y) :- female(X), parent(X, Y).
 grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
@@ -83,7 +81,6 @@ aunt(X, Y) :- female(X), parent(P, Y), siblings(X, P).
 cousin(X, Y) :- parent(PX, X), parent(PY, Y), siblings(PX, PY), X \= Y.  
 
 /* d)
-
 | ?- cousin(haley, lily).
 | ?- father(F, luke).
 | ?- uncle(U, lily).
@@ -92,7 +89,6 @@ cousin(X, Y) :- parent(PX, X), parent(PY, Y), siblings(PX, PY), X \= Y.
 | ?- halfSiblings(HS1, HS2). */
 
 /* e)
-
 wedding(jay, gloria, '2008').
 wedding(jay, dede, '1968').
 divorce(jay, dede, '2003'). */
