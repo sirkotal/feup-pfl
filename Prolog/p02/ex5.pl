@@ -1,7 +1,6 @@
 /* a) */
 
 /* i) */
-
 factorial(1, F, F).
 factorial(N, Acc, F) :-
     N > 1,
@@ -10,7 +9,6 @@ factorial(N, Acc, F) :-
     factorial(N1, Acc1, F).
 
 /* ii) */
-
 sum_rec(0, X, X).
 sum_rec(N, Acc, X) :-
     N > 0,
@@ -21,7 +19,6 @@ sum_rec(N, Acc, X) :-
 sum_rec(N, X) :- sum_rec(N, 0, X).
 
 /* iii) */
-
 pow_tail(_, 0, Acc, Acc).
 pow_tail(X, Y, Acc, P) :-
     Y > 0,
@@ -33,7 +30,6 @@ pow_rec(X, Y, P) :-
     pow_tail(X, Y, 1, P).
 
 /* iv) */
-
 square_tail(0, Acc, Acc).
 square_tail(N, Acc, S) :-
     N > 0,
@@ -44,7 +40,6 @@ square_tail(N, Acc, S) :-
 square_rec(N, S) :- square_tail(N, 0, S).  
 
 /* v) */
-
 fibonacci_tail(0, A, _, A).
 fibonacci_tail(N, A, B, F) :-
     N > 0,
